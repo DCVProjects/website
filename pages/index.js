@@ -1,82 +1,61 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Image from "next/image";
+import Logo from "../public/logo.png";
+import AlchemixLogo from "../public/alchemix.png";
+import DopexLogo from "../public/dopex.svg";
+import BuudlezLogo from "../public/buudlez.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-900 text-gray-300">
       <Head>
-        <title>Create Next App</title>
+        <title>DCV</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <main className="flex flex-col items-center justify-center flex-1 px-20 text-center bg-gray-900 w-1/2">
+        <div>
+          <Image src={Logo} width={600} height={200} alt="dcv logo" />
+        </div>
+        <div className="flex flex-row w-full mb-10 -mt-4 items-center justify-center">
+          <button>
+            <a href="https://twitter.com/dcv_capital" target="_blank">
+              <FontAwesomeIcon icon={faTwitter} size="lg" className="text-gray-400 mr-5" />
+            </a>
+          </button>
+          <button>
+            <a href="mailto:hi@dcv.capital">
+              <FontAwesomeIcon icon={faEnvelope} size="lg" className="text-gray-400" />
+            </a>
+          </button>
+        </div>
+        <div>
+          <div className="text-justify text-lg">
+            Simultaneously everywhere and nowhere at the same time. We are the shadowy super-coders that lurk in every Discord server and every governance call. A collective of engineers, operators & defi OGs angel investing together. Think
+            decentralized venture capital 2.0. Our vision is to make Web3 accessible to everyone in the world, and we won’t stop until the old paradigm is irreparably broken.
+          </div>
+        </div>
+        <div className="mt-20 w-full">
+          <div className="text-white font-semibold text-3xl mb-20">Our Portfolio</div>
+          <div className="flex flex-row justify-around">
+            <button>
+              <Image src={AlchemixLogo} width={100} height={100} alt="alchemix logo" />
+            </button>
+            <button className="">
+              <Image src={DopexLogo} width={100} height={100} alt="dopex logo" />
+            </button>
+            <button className="">
+              <Image src={BuudlezLogo} width={150} height={100} alt="dopex logo" />
+            </button>
+          </div>
         </div>
       </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
     </div>
-  )
+  );
 }
