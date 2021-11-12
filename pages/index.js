@@ -19,8 +19,8 @@ export default function Home() {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       </Head>
-      <main className="flex flex-col items-center justify-center flex-1 px-20 text-center bg-gray-900 w-1/2">
-        <div>
+      <main className="flex flex-col items-center justify-center flex-1 md:px-0 px-8 text-center bg-gray-900 md:w-1/2">
+        <div className="flex-shrink-0">
           <Image src={Logo} width={600} height={200} alt="dcv logo" />
         </div>
         <div className="flex flex-row w-full mb-10 -mt-4 items-center justify-center">
@@ -36,18 +36,18 @@ export default function Home() {
           </button>
         </div>
         <div>
-          <div className="text-justify text-lg">
+          <div className="md:text-justify text-center text-lg">
             Simultaneously everywhere and nowhere at the same time. We are the shadowy super-coders that lurk in every Discord server and every governance call. A collective of engineers, operators & defi OGs angel investing together. Think
             decentralized venture capital 2.0. Our vision is to make Web3 accessible to everyone in the world, and we won’t stop until the old paradigm is irreparably broken.
           </div>
         </div>
         <div className="mt-20 w-full">
-          <div className="text-white font-semibold text-3xl mb-20">Our Portfolio</div>
-          <div className="flex flex-row justify-around">
-            <button>
+          <div className="text-white font-semibold text-3xl mb-14">Our Portfolio</div>
+          <div className="flex md:flex-row flex-col justify-around">
+            <button className="md:mb-0 mb-8">
               <Image src={AlchemixLogo} width={100} height={100} alt="alchemix logo" />
             </button>
-            <button className="">
+            <button className="md:mb-0 mb-8">
               <Image src={DopexLogo} width={100} height={100} alt="dopex logo" />
             </button>
             <button className="">
