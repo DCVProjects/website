@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "author": "Inugami",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
