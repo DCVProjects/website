@@ -4,7 +4,10 @@ import Logo from "../public/logo.png";
 import AlchemixLogo from "../public/alchemix.png";
 import DopexLogo from "../public/dopex.svg";
 import BuudlezLogo from "../public/buudlez.png";
+import ParagonsLogo from "../public/paragons.png";
+import ElasticSwapLogo from "../public/elasticswap.svg";
 import MeritCircleLogo from "../public/meritcircle.png";
+import PrepoLogo from "../public/prepo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -47,19 +50,54 @@ export default function Home() {
         </div>
         <div className="mt-20 w-full">
           <div className="text-white font-semibold text-3xl mb-14 underline">Our Portfolio</div>
-          <div className="flex md:flex-row flex-col justify-around">
-            <button className="md:mb-0 mb-10">
-              <Image src={AlchemixLogo} width={100} height={100} alt="alchemix" />
-            </button>
-            <button className="md:mb-0 mb-10">
-              <Image src={DopexLogo} width={100} height={100} alt="dopex" />
-            </button>
-            <button className="md:mb-0 mb-10">
-              <Image src={MeritCircleLogo} width={100} height={100} alt="merit circle" />
-            </button>
-            <button className="md:mb-0 mb-10">
-              <Image src={BuudlezLogo} width={150} height={100} alt="buudlez" />
-            </button>
+          <div className="grid grid-cols-4 gap-14">
+            {[
+              {
+                logo: AlchemixLogo,
+                name: "Alchemist",
+                link: "https://alchemix.fi/",
+              },
+              {
+                logo: DopexLogo,
+                name: "Dopex",
+                link: "https://www.dopex.io/",
+              },
+              {
+                logo: MeritCircleLogo,
+                name: "Merit Circle",
+                link: "https://meritcircle.io/",
+              },
+              {
+                logo: BuudlezLogo,
+                name: "Buudlez",
+                width: 150,
+                link: "https://www.buudlez.com/",
+              },
+              {
+                logo: ElasticSwapLogo,
+                name: "Elastic Swap",
+                width: 80,
+                link: "https://elasticswap.org/",
+              },
+              {
+                logo: ParagonsLogo,
+                name: "Paragon",
+                link: "https://paragonsdao.com/",
+              },
+              {
+                logo: PrepoLogo,
+                name: "Prepo",
+                width: 160,
+                link: "https://prepo.io/",
+              },
+            ].map((item) => {
+              return (
+                <a target="_blank" href={item.link} className="md:mb-0 mb-10">
+                  <Image src={item.logo} width={item.width ? item.width : 100} height={item.height ? item.height : 100} alt={item.name} />
+                  <div className="mt-2 text-gray-300 text-lg">{item.name}</div>
+                </a>
+              );
+            })}
           </div>
         </div>
       </main>
