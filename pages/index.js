@@ -92,9 +92,9 @@ export default function Home() {
               },
             ].map((item) => {
               return (
-                <a target="_blank" href={item.link} className="md:mb-0 mb-10">
+                <a key={item.name} target="_blank" href={item.link} className="md:mb-0 mb-10">
                   <Image src={item.logo} width={item.width ? item.width : 100} height={item.height ? item.height : 100} alt={item.name} />
-                  <div className="mt-2 text-gray-300 text-lg">{item.name}</div>
+                  <div className="mt-2 text-gray-400 text-lg">{item.name}</div>
                 </a>
               );
             })}
