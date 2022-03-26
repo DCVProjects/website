@@ -81,7 +81,7 @@ export default function Home() {
               },
               {
                 logo: ParagonsLogo,
-                name: "Paragon",
+                name: "Paragons",
                 link: "https://paragonsdao.com/",
               },
               {
