@@ -50,7 +50,7 @@ export default function Home() {
         </div>
         <div className="mt-20 w-full">
           <div className="text-white font-semibold text-3xl mb-14 underline">Our Portfolio</div>
-          <div className="grid grid-cols-4 gap-14">
+          <div className="grid md:grid-cols-4 grid-cols-2 gap-14">
             {[
               {
                 logo: AlchemixLogo,
@@ -63,15 +63,21 @@ export default function Home() {
                 link: "https://www.dopex.io/",
               },
               {
-                logo: MeritCircleLogo,
-                name: "Merit Circle",
-                link: "https://meritcircle.io/",
+                logo: PrepoLogo,
+                name: "prePO",
+                width: 160,
+                link: "https://prepo.io/",
               },
               {
                 logo: BuudlezLogo,
                 name: "Buudlez",
                 width: 150,
                 link: "https://www.buudlez.com/",
+              },
+              {
+                logo: MeritCircleLogo,
+                name: "Merit Circle",
+                link: "https://meritcircle.io/",
               },
               {
                 logo: ElasticSwapLogo,
@@ -84,17 +90,11 @@ export default function Home() {
                 name: "Paragons",
                 link: "https://paragonsdao.com/",
               },
-              {
-                logo: PrepoLogo,
-                name: "prePO",
-                width: 160,
-                link: "https://prepo.io/",
-              },
             ].map((item) => {
               return (
                 <a key={item.name} target="_blank" href={item.link} className="md:mb-0 mb-10">
                   <Image src={item.logo} width={item.width ? item.width : 100} height={item.height ? item.height : 100} alt={item.name} />
-                  <div className="mt-2 text-gray-400 text-lg">{item.name}</div>
+                  <div className="mt-2 text-gray-400 text-lg font-semibold">{item.name}</div>
                 </a>
               );
             })}
