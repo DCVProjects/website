@@ -86,7 +86,7 @@ export default function Home() {
               },
               {
                 logo: PrepoLogo,
-                name: "Prepo",
+                name: "prePO",
                 width: 160,
                 link: "https://prepo.io/",
               },
