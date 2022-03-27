@@ -54,7 +54,7 @@ export default function Home() {
             {[
               {
                 logo: AlchemixLogo,
-                name: "Alchemist",
+                name: "Alchemix",
                 link: "https://alchemix.fi/",
               },
               {
