@@ -69,12 +69,6 @@ export default function Home() {
                 link: "https://prepo.io/",
               },
               {
-                logo: BuudlezLogo,
-                name: "Buudlez",
-                width: 150,
-                link: "https://www.buudlez.com/",
-              },
-              {
                 logo: MeritCircleLogo,
                 name: "Merit Circle",
                 link: "https://meritcircle.io/",
