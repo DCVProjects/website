@@ -44,8 +44,8 @@ export default function Home() {
         </div>
         <div>
           <div className="md:text-justify text-center text-lg">
-            Simultaneously everywhere and nowhere at the same time. We are the shadowy super-coders that lurk in every Discord server and every governance call. A collective of engineers, operators & defi OGs angel investing together. Think
-            decentralized venture capital 2.0. Our vision is to make Web3 accessible to everyone in the world, and we won’t stop until the old paradigm is irreparably broken.
+            Simultaneously everywhere and nowhere. We are the shadowy super-coders that lurk in every Discord server and every governance call. A collective of engineers, operators & defi OGs angel investing together. Think decentralized venture
+            capital 2.0. Our vision is to make Web3 accessible to everyone in the world, and we won’t stop until the old paradigm is irreparably broken.
           </div>
         </div>
         <div className="mt-20 w-full">
@@ -75,7 +75,7 @@ export default function Home() {
               },
               {
                 logo: ElasticSwapLogo,
-                name: "Elastic Swap",
+                name: "ElasticSwap",
                 width: 80,
                 link: "https://elasticswap.org/",
               },
