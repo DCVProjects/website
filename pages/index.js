@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import Logo from "../public/logo.png";
+import Link from "next/link"
 import AlchemixLogo from "../public/alchemix.png";
 import DopexLogo from "../public/dopex.svg";
 import BuudlezLogo from "../public/buudlez.png";
@@ -8,6 +8,7 @@ import ParagonsLogo from "../public/paragons.png";
 import ElasticSwapLogo from "../public/elasticswap.svg";
 import MeritCircleLogo from "../public/meritcircle.png";
 import PrepoLogo from "../public/prepo.svg";
+import Banner from "../components/banner"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +16,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-900 text-gray-300 font-source-sans-pro">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-gray-300 font-source-sans-pro">
       <Head>
         <title>DCV</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -26,11 +27,13 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet" />
       </Head>
-      <main className="flex flex-col items-center justify-center flex-1 md:px-0 px-8 text-center bg-gray-900 md:w-1/2">
-        <div className="flex-shrink-0">
-          <Image src={Logo} width={600} height={200} alt="dcv logo" />
-        </div>
-        <div className="flex flex-row w-full mb-10 -mt-4 items-center justify-center">
+      <main className="flex flex-col items-center flex-1 md:px-0 px-8 text-center bg-gray-900 md:w-1/2">
+        <Link href="/members">
+          <a>
+            <Banner />
+          </a>
+        </Link>
+        <div className="flex flex-row w-full mb-8 mt-10 items-center justify-center">
           <button>
             <a href="https://twitter.com/dcv_capital" target="_blank">
               <FontAwesomeIcon icon={faTwitter} size="lg" className="text-gray-400 mr-5" />
@@ -48,8 +51,13 @@ export default function Home() {
             capital 2.0. Our vision is to make Web3 accessible to everyone in the world, and we won’t stop until the old paradigm is irreparably broken.
           </div>
         </div>
-        <div className="mt-20 w-full">
-          <div className="text-white font-semibold text-3xl mb-14 underline">Our Portfolio</div>
+        <div className="mt-6 w-full">
+          <Link href="/members">
+            <a>
+              <div className="text-white font-semibold text-2xl mb-12 underline">Members</div>
+            </a>
+          </Link>
+          <div className="text-white font-semibold text-3xl mb-14 ">Our Portfolio</div>
           <div className="grid md:grid-cols-4 grid-cols-2 gap-14">
             {[
               {
