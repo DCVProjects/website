@@ -1,6 +1,6 @@
 .holdBox{
 width: 250px;
-height: 170px;
+height: 175px;
 }
 
 .member {
@@ -9,7 +9,7 @@ flex-direction: column;
 align-items: center;
 background-color: white;
 width: 250px;
-height: 170px;
+height: 175px;
 border-radius: 20px;
 }
 
