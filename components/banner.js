@@ -1,8 +1,10 @@
-import Link from "next/link"
 import logo from "../public/dcv_white.png"
+import Image from "next/image"
 
 export default function Banner() {
   return (
-    <img src={logo.src} className="logo" alt="logo"/>
+      <div className="mt-10">
+        <Image src={logo} alt="logo" width="400" height="162" />
+      </div>
   )
 }

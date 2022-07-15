@@ -1,10 +1,8 @@
 import Member from "./Member"
-import logo from "../../public/dcv_white.png"
 import React from "react";
 import Banner from "../../components/banner"
 import Link from "next/link"
 import Head from "next/head"
-// import Image from "next/image";
 
 export default function MemberPage() { 
 
@@ -24,26 +22,23 @@ export default function MemberPage() {
   })
 
   return (
-    <>
+    <div className="px-8 bg-gray-900 min-h-screen">
       <Head>
         <title>DCV Members</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <meta name="author" content="toast.eth"/>
       </Head>
-      <div className="px-8 bg-gray-900">
-        <header>
+      <div >
+        <header className="flex justify-center">
           <Link href="/">
             <a>
               <Banner />
             </a>
           </Link>
         </header>
-          <div className="members">
+          <div className="flex flex-wrap justify-center px-[130px] pb-[130px] mt-16 gap-10 font-poppins">
             { memberElements }
+          </div>
         </div>
       </div>
-    </>
   );
 }

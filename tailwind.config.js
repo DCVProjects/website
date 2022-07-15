@@ -5,9 +5,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "source-sans-pro": ["Source Sans Pro"],
+        "poppins": ["Poppins"],
+        // "source-sans-pro": ["Source Sans Pro"],
       },
     },
+  },
+  images: {
+    domains: ['pbs.twimg.com'],
   },
   variants: {
     extend: {},

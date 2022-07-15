@@ -1,43 +1,57 @@
 import React from "react"
+import styles from "./members.module.css"
+import Image from "next/image"
+import bannerImgDefault from "../../public/blank_banner.png"
 
 export default function Member(props) {
  
   const profile_image = props.profile_image_url.replace("_normal", "")
   const description = props.description.replace(/\n/g, ' ').trim()
 
-  const [bannerLoad, setBannerLoad] = React.useState(false)
   const [profileLoad, setProfileLoad] = React.useState(false)
 
-  function showBanner() {
-    setBannerLoad(true)
-  }
   function showProfile() {
     setProfileLoad(true)
   }
   
   return (
-      <div className="test-box ">
-        <a href={`https://twitter.com/${props.screen_name}`} target="_blank" className="member" rel="noopener noreferrer">
-        {props.profile_banner_url ? 
-        <>
-          <img src={props.profile_banner_url} alt="" className="banner" onLoad={showBanner}
-            style={ bannerLoad ? {} : {display: "none"}}
-          />
-          <img src="../images/blank_banner.png" alt="" className="banner" style={ bannerLoad ? {display: "none"} : {}}/>
-        </>
-         : <img src="../images/blank_banner.png" className="banner" alt="" 
-        />}
-        <>
-          <img src={profile_image} alt="" className="profile-img" onLoad={showProfile}
-            style={ profileLoad ? {} : {display: "none"}}/>
+      <div className={styles.holdBox}>
+        <a href={`https://twitter.com/${props.screen_name}`} target="_blank" className={styles.member} rel="noopener noreferrer">
 
-          <img src="../images/blank_profile.png" alt="" className="profile-img" style={ profileLoad ? {display: "none"} : {}}/>
-        </>
-        <div className="nameBox ">
+        {props.profile_banner_url ? //checks if member has banner set. renders default if not
+          <div>
+            <Image src={props.profile_banner_url} height="167" width="500" placeholder="blur" alt="" className={styles.banner} 
+            blurDataURL="../../blank_banner.png" 
+            unoptimized={true} // maybe only needed for development. https://github.com/vercel/next.js/issues/23590
+            />
+          </div>
+          : 
+          <div>
+              <Image src={bannerImgDefault} height="167" width="500" placeholder="blur" alt="" className={styles.banner} 
+                blurDataURL="../../blank_banner.png" 
+                unoptimized={true} // maybe only needed for development. https://github.com/vercel/next.js/issues/23590
+              />
+          </div>
+        }
+        
+        <div>
+            {/* unable to use Image component here as having strange effect on the rendered image
+
+            <Image img src={profile_image} height="120" width="120"  placeholder="blur" alt="" className={styles.profileImg} 
+                blurDataURL="../../blank_profile.png" 
+                unoptimized={true} // maybe only needed for development. https://github.com/vercel/next.js/issues/23590
+             /> */}
+
+          <img src={profile_image} alt="" className={styles.profileImg} onLoad={showProfile}
+            style={ profileLoad ? {} : {display: "none"}}/>
+          <img src="/blank_profile.png" alt="" className={styles.profileImg} style={ profileLoad ? {display: "none"} : {}}/>
+        </div>
+
+        <div className={styles.nameBox}>
             <p>{props.name}</p>
             <span>@{props.screen_name}</span>
         </div>
-        <p className="info ">{description}</p>
+        <p className={styles.info}>{description}</p>
         </a>
       </div>
   )

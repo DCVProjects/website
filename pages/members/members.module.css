@@ -1,0 +1,101 @@
+.holdBox{
+width: 250px;
+height: 170px;
+}
+
+.member {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: white;
+width: 250px;
+height: 170px;
+border-radius: 20px;
+}
+
+.profileImg {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transform: translatey(-90%);
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+.nameBox {
+display: flex;
+flex-direction: column;
+height: 47px;
+justify-content: center;
+transform: translatey(-200%);
+line-height: 1.25em;
+text-align: center;
+color: #555;
+font-weight: 600;
+font-size: 1.1em;
+left: 50%;
+padding: 10px;
+}
+
+.nameBox span {
+font-size: 0.75em;
+opacity: 50%;
+}
+
+.banner {
+visibility: hidden;
+width: 100%;
+border-radius: 20px 20px 0 0;
+}
+
+.info {
+visibility: hidden;
+position: absolute;
+width: 250px;
+height: 188px;
+right: 0;
+bottom: 0;
+line-height: 1.2em;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 30px;
+color: #555;
+opacity: 80%;
+}
+
+@media (hover: hover) {
+  .member:hover {
+    position: absolute;
+    z-index: 1;
+    border-radius: 30px 30px 20px 20px;
+    width: 500px;
+    height: 355px;
+    box-shadow: 0 0 70px rgba(0,0,0,0.8);
+    transition: 0.3s;
+    transform: translate(-25%, -87px);
+  }
+
+  .member:hover .profileImg{
+    transition: 0.3s;
+    outline: 5px solid white;
+    margin-right: 130px;
+    box-shadow: none;
+    transform: translate(-50%, -20%);
+  } 
+
+  .member:hover .banner {
+    visibility: visible;
+  }
+
+  .member:hover .info {
+    visibility: visible;
+  }
+
+  .member:hover .nameBox {
+    width: 250px;
+    transition: 0.3s;
+    transform: translate(-125px, -20%);
+  }
+}
+

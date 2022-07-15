@@ -16,17 +16,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-gray-300 font-source-sans-pro">
-      <Head>
-        <title>DCV</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet" />
-      </Head>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-gray-300 font-poppins">
       <main className="flex flex-col items-center flex-1 md:px-0 px-8 text-center bg-gray-900 md:w-1/2">
         <Link href="/members">
           <a>
