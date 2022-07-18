@@ -48,7 +48,7 @@ export default function Home() {
             </a>
           </Link>
           <div className="text-white font-semibold text-3xl mb-14 ">Our Portfolio</div>
-          <div className="grid md:grid-cols-4 grid-cols-2 gap-14">
+          <div className="grid md:grid-cols-4 grid-cols-2 gap-14 mb-12">
             {[
               {
                 logo: AlchemixLogo,

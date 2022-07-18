@@ -1,4 +1,4 @@
-import React from "react"
+import { useState } from "react"
 import styles from "./members.module.css"
 import Image from "next/image"
 import bannerImgDefault from "../../public/blank_banner.png"
@@ -8,7 +8,7 @@ export default function Member(props) {
   const profile_image = props.profile_image_url.replace("_normal", "")
   const description = props.description.replace(/\n/g, ' ').trim()
 
-  const [profileLoad, setProfileLoad] = React.useState(false)
+  const [profileLoad, setProfileLoad] = useState(false)
 
   function showProfile() {
     setProfileLoad(true)
@@ -21,16 +21,12 @@ export default function Member(props) {
         {props.profile_banner_url ? //checks if member has banner set. renders default if not
           <div>
             <Image src={props.profile_banner_url} height="167" width="500" placeholder="blur" alt="" className={styles.banner} 
-            blurDataURL="../../blank_banner.png" 
-            unoptimized={true} // maybe only needed for development. https://github.com/vercel/next.js/issues/23590
-            />
+            blurDataURL="../../blank_banner.png"/>
           </div>
           : 
           <div>
               <Image src={bannerImgDefault} height="167" width="500" placeholder="blur" alt="" className={styles.banner} 
-                blurDataURL="../../blank_banner.png" 
-                unoptimized={true} // maybe only needed for development. https://github.com/vercel/next.js/issues/23590
-              />
+                blurDataURL="../../blank_banner.png"/>
           </div>
         }
         
@@ -38,9 +34,7 @@ export default function Member(props) {
             {/* unable to use Image component here as having strange effect on the rendered image
 
             <Image img src={profile_image} height="120" width="120"  placeholder="blur" alt="" className={styles.profileImg} 
-                blurDataURL="../../blank_profile.png" 
-                unoptimized={true} // maybe only needed for development. https://github.com/vercel/next.js/issues/23590
-             /> */}
+                blurDataURL="../../blank_profile.png"/> */}
 
           <img src={profile_image} alt="" className={styles.profileImg} onLoad={showProfile}
             style={ profileLoad ? {} : {display: "none"}}/>

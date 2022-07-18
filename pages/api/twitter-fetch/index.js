@@ -36,11 +36,10 @@ const members = {
 
 //get Twitter user object
 async function getUser(user_id) {
-  const user = await client.v1.user({user_id})
-     return user;
+  return await client.v1.user({user_id})
 }
 
-function compare( a, b ) {
+function compare(a, b) {
   if ( a.followers_count > b.followers_count ){
     return -1;
   }
@@ -50,7 +49,7 @@ function compare( a, b ) {
   return 0;
 }
 
-const getAllMembers = async () => {
+async function getAllMembers() {
   const arrMembers = Object.values(members); // return array of member ids
   const memberObjs = await Promise.all(arrMembers.map(key => (getUser(key))))
   return memberObjs.sort(compare)

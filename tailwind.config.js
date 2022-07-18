@@ -6,12 +6,8 @@ module.exports = {
     extend: {
       fontFamily: {
         "poppins": ["Poppins"],
-        // "source-sans-pro": ["Source Sans Pro"],
       },
     },
-  },
-  images: {
-    domains: ['pbs.twimg.com'],
   },
   variants: {
     extend: {},
