@@ -1,7 +1,7 @@
 import { useState } from "react"
 import styles from "./members.module.css"
 import Image from "next/image"
-import bannerImgDefault from "../../public/blank_banner.png"
+import bannerImgDefault from "../public/blank_banner.png"
 
 export default function Member(props) {
  

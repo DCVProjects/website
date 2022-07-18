@@ -8,7 +8,7 @@ import ParagonsLogo from "../public/paragons.png";
 import ElasticSwapLogo from "../public/elasticswap.svg";
 import MeritCircleLogo from "../public/meritcircle.png";
 import PrepoLogo from "../public/prepo.svg";
-import Banner from "../components/banner"
+import Banner from "../components/Banner"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
