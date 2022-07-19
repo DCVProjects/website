@@ -1,7 +1,6 @@
-import { useState } from "react"
-import styles from "./members.module.css"
+import styles from "../styles/members.module.css"
 import Image from "next/image"
-import bannerImgDefault from "../public/blank_banner.png"
+import BannerImgDefault from "../public/blank_banner.png"
 
 export default function Member(props) {
  
@@ -18,7 +17,7 @@ export default function Member(props) {
         </div>
       : 
         <div>
-            <Image src={bannerImgDefault} height="167" width="500" placeholder="blur" alt="" className={styles.banner} 
+            <Image src={BannerImgDefault} height="167" width="500" placeholder="blur" alt="" className={styles.banner} 
               blurDataURL="../../blank_banner.png"/>
         </div>
       }

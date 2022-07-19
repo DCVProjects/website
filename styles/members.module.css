@@ -1,4 +1,4 @@
-.holdBox{
+.holdBox {
 width: 250px;
 height: 175px;
 }
@@ -76,7 +76,7 @@ opacity: 80%;
     transform: translate(-25%, -87px);
   }
 
-  .member:hover .profileImg{
+  .member:hover .profileImg {
     transition: 0.3s;
     outline: 5px solid white;
     margin-right: 130px;
