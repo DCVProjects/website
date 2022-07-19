@@ -1,5 +1,5 @@
 import Member from "../../components/Member"
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../../components/Banner"
 import Link from "next/link"
 import Head from "next/head"
@@ -67,8 +67,8 @@ export async function getServerSideProps() {
   }
 
   //get Twitter user object
-  async function getUser(user_id) {
-    return await client.v1.user({user_id})
+  async function getUser(userId) {
+    return await client.v1.user({user_id:userId})
   }
 
   function compare(a, b) {
