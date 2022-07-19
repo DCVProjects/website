@@ -1,5 +1,5 @@
 import Member from "../../components/Member"
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Banner from "../../components/Banner"
 import Link from "next/link"
 import Head from "next/head"
@@ -32,7 +32,7 @@ export default function MemberPage({ memberData }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
   const client = require("../../utilities/twitterClient");
 
@@ -92,6 +92,7 @@ export async function getServerSideProps() {
   return {
     props: {
       memberData: data
-    }
+    },
+    revalidate: 30,
   }
 }

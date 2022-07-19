@@ -22,7 +22,9 @@ export default function Member(props) {
               blurDataURL="../../blank_banner.png"/>
         </div>
       }
-      <img src={!!profile_image ? profile_image : "../images/blank_profile.png" } className={styles.profileImg} />
+      <div>
+        <img src={profile_image} className={`${styles.profileImg} bg-white`} />
+      </div>
       <div className={styles.nameBox}>
           <p>{props.name}</p>
           <span>@{props.screen_name}</span>
