@@ -8,13 +8,6 @@ export default function Member(props) {
   const profile_image = props.profile_image_url.replace("_normal", "")
   const description = props.description.replace(/\n/g, ' ').trim()
 
-  const [profileLoad, setProfileLoad] = useState(false)
-
-  function showProfile() {
-    setProfileLoad(true)
-    // window.location.reload();
-  }
-  
   return (
     <div className={styles.holdBox}>
       <a href={`https://twitter.com/${props.screen_name}`} target="_blank" className={styles.member} rel="noopener noreferrer">
