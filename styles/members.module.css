@@ -1,16 +1,16 @@
 .holdBox {
-width: 250px;
-height: 175px;
+  width: 250px;
+  height: 175px;
 }
 
 .member {
-display: flex;
-flex-direction: column;
-align-items: center;
-background-color: white;
-width: 250px;
-height: 175px;
-border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 250px;
+  height: 175px;
+  border-radius: 20px;
 }
 
 .profileImg {
@@ -22,46 +22,46 @@ border-radius: 20px;
 }
 
 .nameBox {
-display: flex;
-flex-direction: column;
-height: 47px;
-justify-content: center;
-transform: translatey(-200%);
-line-height: 1.25em;
-text-align: center;
-color: #555;
-font-weight: 600;
-font-size: 1.1em;
-left: 50%;
-padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 47px;
+  justify-content: center;
+  transform: translatey(-200%);
+  line-height: 1.25em;
+  text-align: center;
+  color: #555;
+  font-weight: 600;
+  font-size: 1.1em;
+  left: 50%;
+  padding: 10px;
 }
 
 .nameBox span {
-font-size: 0.75em;
-opacity: 50%;
+  font-size: 0.75em;
+  opacity: 50%;
 }
 
 .banner {
-visibility: hidden;
-width: 100%;
-border-radius: 20px 20px 0 0;
+  visibility: hidden;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
 }
 
 .info {
-visibility: hidden;
-position: absolute;
-width: 250px;
-height: 188px;
-right: 0;
-bottom: 0;
-line-height: 1.2em;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-padding: 30px;
-color: #555;
-opacity: 80%;
+  visibility: hidden;
+  position: absolute;
+  width: 250px;
+  height: 188px;
+  right: 0;
+  bottom: 0;
+  line-height: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  color: #555;
+  opacity: 80%;
 }
 
 @media (hover: hover) {

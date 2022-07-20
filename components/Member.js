@@ -4,8 +4,8 @@ import BannerImgDefault from "../public/blank_banner.png"
 
 export default function Member(props) {
  
-  const profile_image = props.profile_image_url.replace("_normal", "")
-  const description = props.description.replace(/\n/g, ' ').trim()
+  const cleaned_profile_image = props.profile_image_url.replace("_normal", "")
+  const cleaned_description = props.description.replace(/\n/g, ' ').trim()
 
   return (
     <div className={styles.holdBox}>
@@ -22,13 +22,13 @@ export default function Member(props) {
         </div>
       }
       <div>
-        <img src={profile_image} className={`${styles.profileImg} bg-white`} />
+        <img src={cleaned_profile_image} className={`${styles.profileImg} bg-white`} />
       </div>
       <div className={styles.nameBox}>
           <p>{props.name}</p>
           <span>@{props.screen_name}</span>
       </div>
-      <p className={styles.info}>{description}</p>
+      <p className={styles.info}>{cleaned_description}</p>
       </a>
     </div>
   )
