@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "source-sans-pro": ["Source Sans Pro"],
+        "poppins": ["Poppins"],
       },
     },
   },
