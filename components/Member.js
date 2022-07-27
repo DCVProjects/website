@@ -3,6 +3,7 @@ import Image from "next/image"
 import BannerImgDefault from "../public/blank_banner.png"
 
 export default function Member(props) {
+  
  
   const cleaned_profile_image = props.profile_image_url.replace("_normal", "")
   const cleaned_description = props.description.replace(/\n/g, ' ').trim()
