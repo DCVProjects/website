@@ -109,4 +109,10 @@
     .member:hover { 
       transition: none
     }
+    .member:hover .profileImg {
+      transition: none
+    }
+    .member:hover .nameBox {
+      transition: none 
+    }
 }}
