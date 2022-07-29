@@ -73,12 +73,12 @@
     height: 355px;
     box-shadow: 0 0 70px rgba(0,0,0,0.8);
     transition: 0.3s;
-    transform: translate(-25%, -87px);
+    transform: translate(-125px, -87px);
   }
 
   .member:hover .profileImg {
     transition: 0.3s;
-    outline: 5px solid white;
+    border: 5px solid white;
     margin-right: 130px;
     box-shadow: none;
     transform: translate(-50%, -20%);
