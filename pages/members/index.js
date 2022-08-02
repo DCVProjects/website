@@ -63,7 +63,9 @@ export async function getStaticProps() {
     ross: "517856571",
     aribma: "1447605049790803973",
     t3rtium: "1373726811339771905",
-    oxean: "1483954529301237762"
+    oxean: "1483954529301237762",
+    david: "283493104",
+    theo: "407205601"
   }
 
   //get Twitter user object
