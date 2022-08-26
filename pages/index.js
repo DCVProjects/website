@@ -1,14 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 import AlchemixLogo from "../public/alchemix.png";
 import DopexLogo from "../public/dopex.svg";
-import BuudlezLogo from "../public/buudlez.png";
+import MoverLogo from "../public/moverlogo.png";
 import ParagonsLogo from "../public/paragons.png";
 import ElasticSwapLogo from "../public/elasticswap.svg";
 import MeritCircleLogo from "../public/meritcircle.png";
 import PrepoLogo from "../public/prepo.svg";
-import Banner from "../components/Banner"
+import NFTPerpLogo from "../public/nftperp.svg";
+import Banner from "../components/Banner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -81,6 +82,16 @@ export default function Home() {
                 logo: ParagonsLogo,
                 name: "Paragons",
                 link: "https://paragonsdao.com/",
+              },
+              {
+                logo: MoverLogo,
+                name: "Mover",
+                link: "https://viamover.com/",
+              },
+              {
+                logo: NFTPerpLogo,
+                name: "NFTPerp",
+                link: "https://nftperp.xyz/",
               },
             ].map((item) => {
               return (

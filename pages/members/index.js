@@ -1,22 +1,21 @@
-import Member from "../../components/Member"
+import Member from "../../components/Member";
 import React, { useState } from "react";
-import Banner from "../../components/Banner"
-import Link from "next/link"
-import Head from "next/head"
+import Banner from "../../components/Banner";
+import Link from "next/link";
+import Head from "next/head";
 
-export default function MemberPage({ memberData }) { 
-
+export default function MemberPage({ memberData }) {
   const memberElements = memberData.map((element, index) => {
-    return <Member {...element} key={element.id}/>
-  })
+    return <Member {...element} key={element.id} />;
+  });
 
   return (
     <div className="px-8 bg-gray-900 min-h-screen">
       <Head>
         <title>DCV Members</title>
-        <meta name="author" content="toast.eth"/>
+        <meta name="author" content="toast.eth" />
       </Head>
-      <div >
+      <div>
         <header className="flex justify-center">
           <Link href="/">
             <a>
@@ -24,24 +23,21 @@ export default function MemberPage({ memberData }) {
             </a>
           </Link>
         </header>
-          <div className="flex flex-wrap justify-center px-[130px] pb-[130px] mt-16 gap-10 font-poppins">
-            { memberElements }
-          </div>
-        </div>
+        <div className="flex flex-wrap justify-center px-[130px] pb-[130px] mt-16 gap-10 font-poppins">{memberElements}</div>
       </div>
+    </div>
   );
 }
 
 export async function getStaticProps() {
-
   const client = require("../../utilities/twitterClient");
 
   // Twitter IDs
   const members = {
-    toast : "1076915521835225088",
-    scoopy : "1012777913299689477",
+    toast: "1076915521835225088",
+    scoopy: "1012777913299689477",
     alex: "6409802",
-    block : "962932834418790400",
+    block: "962932834418790400",
     foobazz: "706407124079775744",
     mathieu: "106882516",
     cl: "1073132650309726208",
@@ -65,19 +61,21 @@ export async function getStaticProps() {
     t3rtium: "1373726811339771905",
     oxean: "1483954529301237762",
     david: "283493104",
-    theo: "407205601"
-  }
+    theo: "407205601",
+    caps: "1375374923749855238",
+    flexinfinity: "351722442",
+  };
 
   //get Twitter user object
   async function getUser(userId) {
-    return await client.v1.user({user_id:userId})
+    return await client.v1.user({ user_id: userId });
   }
 
   function compare(a, b) {
-    if ( a.followers_count > b.followers_count ){
+    if (a.followers_count > b.followers_count) {
       return -1;
     }
-    if ( a.followers_count < b.followers_count ){
+    if (a.followers_count < b.followers_count) {
       return 1;
     }
     return 0;
@@ -85,16 +83,16 @@ export async function getStaticProps() {
 
   async function getAllMembers() {
     const arrMembers = Object.values(members); // return array of member ids
-    const memberObjs = await Promise.all(arrMembers.map(key => (getUser(key))))
-    return memberObjs.sort(compare)
-  };
+    const memberObjs = await Promise.all(arrMembers.map((key) => getUser(key)));
+    return memberObjs.sort(compare);
+  }
 
-  const data = await getAllMembers()
+  const data = await getAllMembers();
 
   return {
     props: {
-      memberData: data
+      memberData: data,
     },
     revalidate: 30,
-  }
+  };
 }
