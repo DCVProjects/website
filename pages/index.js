@@ -7,6 +7,7 @@ import MoverLogo from "../public/moverlogo.png";
 import ParagonsLogo from "../public/paragons.png";
 import ElasticSwapLogo from "../public/elasticswap.svg";
 import MeritCircleLogo from "../public/meritcircle.png";
+import DivaLogo from "../public/divalogo.svg";
 import PrepoLogo from "../public/prepo.svg";
 import NFTPerpLogo from "../public/nftperp.svg";
 import Banner from "../components/Banner";
@@ -27,28 +28,44 @@ export default function Home() {
         <div className="flex flex-row w-full mb-8 mt-10 items-center justify-center">
           <button>
             <a href="https://twitter.com/dcv_capital" target="_blank">
-              <FontAwesomeIcon icon={faTwitter} size="lg" className="text-gray-400 mr-5" />
+              <FontAwesomeIcon
+                icon={faTwitter}
+                size="lg"
+                className="text-gray-400 mr-5"
+              />
             </a>
           </button>
           <button>
             <a href="mailto:hi@dcv.capital">
-              <FontAwesomeIcon icon={faEnvelope} size="lg" className="text-gray-400" />
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                size="lg"
+                className="text-gray-400"
+              />
             </a>
           </button>
         </div>
         <div>
           <div className="md:text-justify text-center text-lg">
-            Simultaneously everywhere and nowhere. We are the shadowy super-coders that lurk in every Discord server and every governance call. A collective of engineers, operators & defi OGs angel investing together. Think decentralized venture
-            capital 2.0. Our vision is to make Web3 accessible to everyone in the world, and we won’t stop until the old paradigm is irreparably broken.
+            Simultaneously everywhere and nowhere. We are the shadowy
+            super-coders that lurk in every Discord server and every governance
+            call. A collective of engineers, operators & defi OGs angel
+            investing together. Think decentralized venture capital 2.0. Our
+            vision is to make Web3 accessible to everyone in the world, and we
+            won’t stop until the old paradigm is irreparably broken.
           </div>
         </div>
         <div className="mt-6 w-full">
           <Link href="/members">
             <a>
-              <div className="text-white font-semibold text-2xl mb-12 underline">Members</div>
+              <div className="text-white font-semibold text-2xl mb-12 underline">
+                Members
+              </div>
             </a>
           </Link>
-          <div className="text-white font-semibold text-3xl mb-14 ">Our Portfolio</div>
+          <div className="text-white font-semibold text-3xl mb-14 ">
+            Our Portfolio
+          </div>
           <div className="grid md:grid-cols-4 grid-cols-2 gap-14 mb-12">
             {[
               {
@@ -93,11 +110,28 @@ export default function Home() {
                 name: "NFTPerp",
                 link: "https://nftperp.xyz/",
               },
+              {
+                logo: DivaLogo,
+                name: "Diva",
+                link: "https://divalabs.org/",
+              },
             ].map((item) => {
               return (
-                <a key={item.name} target="_blank" href={item.link} className="md:mb-0 mb-10">
-                  <Image src={item.logo} width={item.width ? item.width : 100} height={item.height ? item.height : 100} alt={item.name} />
-                  <div className="mt-2 text-gray-400 text-lg font-semibold">{item.name}</div>
+                <a
+                  key={item.name}
+                  target="_blank"
+                  href={item.link}
+                  className="md:mb-0 mb-10"
+                >
+                  <Image
+                    src={item.logo}
+                    width={item.width ? item.width : 100}
+                    height={item.height ? item.height : 100}
+                    alt={item.name}
+                  />
+                  <div className="mt-2 text-gray-400 text-lg font-semibold">
+                    {item.name}
+                  </div>
                 </a>
               );
             })}
