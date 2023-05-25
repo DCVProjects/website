@@ -74,12 +74,6 @@ export default function Home() {
                 link: "https://meritcircle.io/",
               },
               {
-                logo: ElasticSwapLogo,
-                name: "ElasticSwap",
-                width: 80,
-                link: "https://elasticswap.org/",
-              },
-              {
                 logo: ParagonsLogo,
                 name: "Paragons",
                 link: "https://paragonsdao.com/",
