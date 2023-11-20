@@ -5,7 +5,7 @@ import AlchemixLogo from "../public/alchemix.png";
 import DopexLogo from "../public/dopex.svg";
 import HolyHeldLogo from "../public/holyheld.svg";
 import ParagonsLogo from "../public/paragons.png";
-import ElasticSwapLogo from "../public/elasticswap.svg";
+import Litmitless from "../public/limitless.png";
 import MeritCircleLogo from "../public/meritcircle.png";
 import DivaLogo from "../public/divalogo.svg";
 import PrepoLogo from "../public/prepo.svg";
@@ -92,6 +92,11 @@ export default function Home() {
                 logo: DivaLogo,
                 name: "Diva",
                 link: "https://divalabs.org/",
+              },
+              {
+                logo: Litmitless,
+                name: "Litmitless",
+                link: "https://limitlessfi.xyz/",
               },
             ].map((item) => {
               return (
