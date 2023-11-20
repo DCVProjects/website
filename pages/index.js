@@ -44,11 +44,11 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-6 w-full">
-          <Link href="/members">
+          {/* <Link href="/members">
             <a>
               <div className="text-white font-semibold text-2xl mb-12 underline">Members</div>
             </a>
-          </Link>
+          </Link> */}
           <div className="text-white font-semibold text-3xl mb-14 ">Our Portfolio</div>
           <div className="grid md:grid-cols-4 grid-cols-2 gap-14 mb-12">
             {[
