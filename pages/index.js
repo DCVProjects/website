@@ -5,7 +5,7 @@ import AlchemixLogo from "../public/alchemix.png";
 import DopexLogo from "../public/dopex.svg";
 import HolyHeldLogo from "../public/holyheld.svg";
 import ParagonsLogo from "../public/paragons.png";
-import Litmitless from "../public/limitless.png";
+import Limitless from "../public/limitless.png";
 import MeritCircleLogo from "../public/meritcircle.png";
 import DivaLogo from "../public/divalogo.svg";
 import PrepoLogo from "../public/prepo.svg";
@@ -20,11 +20,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-gray-300 font-poppins">
       <main className="flex flex-col items-center flex-1 md:px-0 px-8 text-center bg-gray-900 md:w-1/2">
-        <Link href="/members">
-          <a>
-            <Banner />
-          </a>
-        </Link>
+        <Banner />
         <div className="flex flex-row w-full mb-8 mt-10 items-center justify-center">
           <button>
             <a href="https://twitter.com/dcv_capital" target="_blank">
@@ -94,8 +90,8 @@ export default function Home() {
                 link: "https://divalabs.org/",
               },
               {
-                logo: Litmitless,
-                name: "Litmitless",
+                logo: Limitless,
+                name: "Limitless",
                 link: "https://limitlessfi.xyz/",
               },
             ].map((item) => {
