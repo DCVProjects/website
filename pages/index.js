@@ -8,8 +8,10 @@ import ParagonsLogo from "../public/paragons.png";
 import Limitless from "../public/limitless.png";
 import MeritCircleLogo from "../public/meritcircle.png";
 import DivaLogo from "../public/divalogo.svg";
-import PrepoLogo from "../public/prepo.svg";
+import SablierLogo from "../public/sablier_logo.png";
 import NFTPerpLogo from "../public/nftperp.svg";
+import HoprLogo from "../public/hopr_logo.png";
+import X23Logo from "../public/x23_logo.svg";
 import Banner from "../components/Banner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -59,12 +61,6 @@ export default function Home() {
                 link: "https://www.dopex.io/",
               },
               {
-                logo: PrepoLogo,
-                name: "prePO",
-                width: 160,
-                link: "https://prepo.io/",
-              },
-              {
                 logo: MeritCircleLogo,
                 name: "Merit Circle",
                 link: "https://meritcircle.io/",
@@ -93,6 +89,21 @@ export default function Home() {
                 logo: Limitless,
                 name: "Limitless",
                 link: "https://limitlessfi.xyz/",
+              },
+              {
+                logo: HoprLogo,
+                name: "HOPR",
+                link: "https://hoprnet.org/",
+              },
+              {
+                logo: SablierLogo,
+                name: "Sablier",
+                link: "https://sablier.com/",
+              },
+              {
+                logo: X23Logo,
+                name: "X23",
+                link: "https://x23.ai/",
               },
             ].map((item) => {
               return (
