@@ -5,7 +5,7 @@ import AlchemixLogo from "../public/alchemix.png";
 import DopexLogo from "../public/dopex.svg";
 import HolyHeldLogo from "../public/holyheld.svg";
 import ParagonsLogo from "../public/paragons.png";
-import Limitless from "../public/limitless.png";
+import GridplusLogo from "../public/gridplus_logo.png";
 import MeritCircleLogo from "../public/meritcircle.png";
 import DivaLogo from "../public/divalogo.svg";
 import SablierLogo from "../public/sablier_logo.png";
@@ -86,9 +86,10 @@ export default function Home() {
                 link: "https://divalabs.org/",
               },
               {
-                logo: Limitless,
-                name: "Limitless",
-                link: "https://limitlessfi.xyz/",
+                logo: GridplusLogo,
+                name: "GridPlus",
+                link: "https://gridplus.io/",
+                width: 200,
               },
               {
                 logo: HoprLogo,
@@ -107,7 +108,7 @@ export default function Home() {
               },
             ].map((item) => {
               return (
-                <a key={item.name} target="_blank" href={item.link} className="md:mb-0 mb-10">
+                <a key={item.name} target="_blank" href={item.link} className="md:mb-0 mb-10 flex items-center flex-col justify-evenly">
                   <Image src={item.logo} width={item.width ? item.width : 100} height={item.height ? item.height : 100} alt={item.name} />
                   <div className="mt-2 text-gray-400 text-lg font-semibold">{item.name}</div>
                 </a>
